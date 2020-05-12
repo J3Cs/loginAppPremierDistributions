@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logOut(){
-    this.flashmsg.show('Sesion Cerrada Correctamente.',{cssClass: 'alert-success', timeout: 4000})
+    this.flashmsg.show('Sesion Cerrada Correctamente.',{cssClass: 'alert-success', timeout: 3000})
     this.authService.logout()
     this.router.navigate(['/'])
   }

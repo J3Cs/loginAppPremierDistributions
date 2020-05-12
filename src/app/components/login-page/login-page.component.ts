@@ -24,8 +24,9 @@ export class LoginPageComponent implements OnInit {
   loginUser(){
     this.authService.loginUser(this.email, this.password)
     .then(res => {
-      this.flashmsg.show('Bienvenido '+this.email,{cssClass: 'alert-success', timeout: 4000})
-      this.router.navigate(['/private'])
-    }).catch(err => this.router.navigate['/login'])
+        this.flashmsg.show('Bienvenido '+this.email,{cssClass: 'alert-success', timeout: 3000})
+        this.router.navigate(['/private'])
+    }).catch(err =>  this.flashmsg.show('Debe llenar los campos correspondientes',{cssClass: 'alert-danger', timeout: 3000}))
+  
   }
 }
